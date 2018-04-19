@@ -19,11 +19,11 @@
 <meta name="keywords" content="react-native">
 <meta property="og:type" content="article">
 <meta property="og:title" content="使用Image作为背景图片时，里面包裹的文字标签要用透明属性- RN">
-<meta property="og:url" content="http://wuweijia.github.io/2018/04/19/使用-Image-作为背景图片时，里面包裹的文字标签要用透明属性-RN/index.html">
+<meta property="og:url" content="http://wuweijia.github.io/2018/05/22/使用-Image-作为背景图片时，里面包裹的文字标签要用透明属性-RN/index.html">
 <meta property="og:site_name" content="混世大魔王zOne">
 <meta property="og:description" content="1234567891011&amp;lt;Image style=&amp;#123;styles.readingGuideHeader&amp;#125; source=&amp;#123;Images.readingGuideHeader&amp;#125;&amp;gt;  &amp;lt;Text style=&amp;#123;styles.readingGuideHeaderSubtitle&amp;#125;&amp;gt;balabalblabalbalbal">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-04-19T08:41:09.000Z">
+<meta property="og:updated_time" content="2018-04-19T13:28:20.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用Image作为背景图片时，里面包裹的文字标签要用透明属性- RN">
 <meta name="twitter:description" content="1234567891011&amp;lt;Image style=&amp;#123;styles.readingGuideHeader&amp;#125; source=&amp;#123;Images.readingGuideHeader&amp;#125;&amp;gt;  &amp;lt;Text style=&amp;#123;styles.readingGuideHeaderSubtitle&amp;#125;&amp;gt;balabalblabalbalbal">
@@ -138,7 +138,7 @@
     <div class="article-meta">
       <span>
         <i class="icon-calendar"></i>
-        <span>2018.04.19</span>
+        <span>2018.05.22</span>
       </span>
 
       
@@ -154,7 +154,7 @@
       
         <span>
           <i class="icon-comment"></i>
-          <a href="http://wuweijia.github.io/2018/04/19/使用-Image-作为背景图片时，里面包裹的文字标签要用透明属性-RN/#disqus_thread"></a>
+          <a href="http://wuweijia.github.io/2018/05/22/使用-Image-作为背景图片时，里面包裹的文字标签要用透明属性-RN/#disqus_thread"></a>
         </span>
       
 
@@ -171,7 +171,7 @@
 
   <div class="article-content">
     
-      <figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;Image style=&#123;styles.readingGuideHeader&#125; source=&#123;Images.readingGuideHeader&#125;&gt;</span><br><span class="line">  &lt;Text style=&#123;styles.readingGuideHeaderSubtitle&#125;&gt;balabalblabalbalbalblab</span><br><span class="line">&lt;<span class="regexp">/Image&gt;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">readingGuideHeaderTitle: &#123;</span></span><br><span class="line"><span class="regexp">     textAlign: 'center',</span></span><br><span class="line"><span class="regexp">     fontFamily: 'PingFangSC-Regular',</span></span><br><span class="line"><span class="regexp">     fontSize:</span></span><br><span class="line"><span class="regexp">     color: '#333',</span></span><br><span class="line"><span class="regexp">     backgroundColor: 'rgba(0,0,0,0)'  /</span><span class="regexp">/ here</span></span><br><span class="line"><span class="regexp">&#125;</span></span><br></pre></td></tr></table></figure>
+      <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">Image</span> <span class="attr">style</span>=<span class="string">&#123;styles.readingGuideHeader&#125;</span> <span class="attr">source</span>=<span class="string">&#123;Images.readingGuideHeader&#125;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">Text</span> <span class="attr">style</span>=<span class="string">&#123;styles.readingGuideHeaderSubtitle&#125;</span>&gt;</span>balabalblabalbalbalblab</span><br><span class="line"><span class="tag">&lt;/<span class="name">Image</span>&gt;</span></span><br><span class="line"></span><br><span class="line">readingGuideHeaderTitle: &#123;</span><br><span class="line">  textAlign: 'center',</span><br><span class="line">  fontFamily: 'PingFangSC-Regular',</span><br><span class="line">  fontSize:</span><br><span class="line">  color: '#333',</span><br><span class="line">  backgroundColor: 'rgba(0,0,0,0)'  // here</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
     
   </div>
@@ -186,15 +186,6 @@
    
 
    
-  <div class="box-prev-next clearfix">
-    <a class="show pull-left" href="/2017/04/19/前端知识点学习总结/">
-        <i class="icon icon-angle-left"></i>
-    </a>
-    <a class="hide pull-right" href="/">
-        <i class="icon icon-angle-right"></i>
-    </a>
-  </div>
-
 
 
 
@@ -260,7 +251,7 @@
   <script>
     var disqus_shortname = 'wuweijia';
     
-    var disqus_url = 'http://wuweijia.github.io/2018/04/19/使用-Image-作为背景图片时，里面包裹的文字标签要用透明属性-RN/';
+    var disqus_url = 'http://wuweijia.github.io/2018/05/22/使用-Image-作为背景图片时，里面包裹的文字标签要用透明属性-RN/';
     
     (function(){
       var dsq = document.createElement('script');
@@ -275,7 +266,6 @@
 
 
 
-    
     
 
     

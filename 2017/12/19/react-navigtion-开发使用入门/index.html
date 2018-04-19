@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+
+
+  <html class="light page-post">
+
+
+<head>
+  <meta charset="utf-8">
+  
+  <title>react-navigtion 开发使用入门 | 混世大魔王zOne</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+    <meta name="keywords" content="react-native," />
+  
+
+  <meta name="description" content="React-Navigation Redux Integrationreact-navigation 集成 redux 后 reducer 写法参考react-navigation header自定义的问题总结react-native-router-flux 采坑总结">
+<meta name="keywords" content="react-native">
+<meta property="og:type" content="article">
+<meta property="og:title" content="react-navigtion 开发使用入门">
+<meta property="og:url" content="http://wuweijia.github.io/2017/12/19/react-navigtion-开发使用入门/index.html">
+<meta property="og:site_name" content="混世大魔王zOne">
+<meta property="og:description" content="React-Navigation Redux Integrationreact-navigation 集成 redux 后 reducer 写法参考react-navigation header自定义的问题总结react-native-router-flux 采坑总结">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-04-19T12:52:13.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="react-navigtion 开发使用入门">
+<meta name="twitter:description" content="React-Navigation Redux Integrationreact-navigation 集成 redux 后 reducer 写法参考react-navigation header自定义的问题总结react-native-router-flux 采坑总结">
+
+  
+
+  
+    <link rel="icon" href="/favicon.ico">
+  
+
+  <link href="/css/styles.css?v=c114cbe6" rel="stylesheet">
+
+
+  
+    <link rel="stylesheet" href="/css/personal-style.css">
+  
+
+  
+
+  
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?57e94d016e201fba3603a8a2b0263af0";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+  
+  <script type="text/javascript">
+	(function(){
+	    var bp = document.createElement('script');
+	    var curProtocol = window.location.protocol.split(':')[0];
+	    if (curProtocol === 'https') {
+	        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+	    }
+	    else {
+	        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+	    }
+	    var s = document.getElementsByTagName("script")[0];
+	    s.parentNode.insertBefore(bp, s);
+	})();
+  </script>
+
+
+
+  
+    <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+
+  
+    <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  
+</head>
+
+<body>
+
+
+  
+    <span id="toolbox-mobile" class="toolbox-mobile">盒子</span>
+  
+
+  <div class="post-header CENTER">
+   
+  <div class="toolbox">
+    <a class="toolbox-entry" href="/">
+      <span class="toolbox-entry-text">盒子</span>
+      <i class="icon-angle-down"></i>
+      <i class="icon-home"></i>
+    </a>
+    <ul class="list-toolbox">
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/archives/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            博客
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/tag/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            标签
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+
+
+</div>
+
+
+  <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#React-Navigation-Redux-Integration"><span class="toc-text">React-Navigation Redux Integration</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#react-navigation-集成-redux-后-reducer-写法参考"><span class="toc-text">react-navigation 集成 redux 后 reducer 写法参考</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#react-navigation-header自定义的问题总结"><span class="toc-text">react-navigation header自定义的问题总结</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#react-native-router-flux-采坑总结"><span class="toc-text">react-native-router-flux 采坑总结</span></a></li></ol>
+  </div>
+
+
+
+<div class="content content-post CENTER">
+   <article id="post-react-navigtion-开发使用入门" class="article article-type-post" itemprop="blogPost">
+  <header class="article-header">
+    <h1 class="post-title">react-navigtion 开发使用入门</h1>
+
+    <div class="article-meta">
+      <span>
+        <i class="icon-calendar"></i>
+        <span>2017.12.19</span>
+      </span>
+
+      
+        <span class="article-author">
+          <i class="icon-user"></i>
+          <span>混世大魔王zOne</span>
+        </span>
+      
+
+      
+
+
+      
+        <span>
+          <i class="icon-comment"></i>
+          <a href="http://wuweijia.github.io/2017/12/19/react-navigtion-开发使用入门/#disqus_thread"></a>
+        </span>
+      
+
+      
+      <i class="fa fa-eye"></i> 
+        <span id="busuanzi_container_page_pv">
+           &nbsp热度 <span id="busuanzi_value_page_pv">
+           <i class="fa fa-spinner fa-spin"></i></span>℃
+        </span>
+      
+      
+    </div>
+  </header>
+
+  <div class="article-content">
+    
+      <h3 id="React-Navigation-Redux-Integration"><a href="#React-Navigation-Redux-Integration" class="headerlink" title="React-Navigation Redux Integration"></a><a href="https://github.com/wuweijia/wuweijia.github.io/issues/14" target="_blank" rel="noopener">React-Navigation Redux Integration</a></h3><h3 id="react-navigation-集成-redux-后-reducer-写法参考"><a href="#react-navigation-集成-redux-后-reducer-写法参考" class="headerlink" title="react-navigation 集成 redux 后 reducer 写法参考"></a><a href="https://github.com/wuweijia/wuweijia.github.io/issues/15" target="_blank" rel="noopener">react-navigation 集成 redux 后 reducer 写法参考</a></h3><h3 id="react-navigation-header自定义的问题总结"><a href="#react-navigation-header自定义的问题总结" class="headerlink" title="react-navigation header自定义的问题总结"></a><a href="https://github.com/wuweijia/wuweijia.github.io/issues/19" target="_blank" rel="noopener">react-navigation header自定义的问题总结</a></h3><h3 id="react-native-router-flux-采坑总结"><a href="#react-native-router-flux-采坑总结" class="headerlink" title="react-native-router-flux 采坑总结"></a><a href="https://github.com/wuweijia/wuweijia.github.io/issues/18" target="_blank" rel="noopener">react-native-router-flux 采坑总结</a></h3>
+    
+  </div>
+
+  
+      <div class="git"></div>
+  
+
+</article>
+
+
+   
+
+   
+
+
+
+</div>
+
+
+  <a id="backTop" class="back-top">
+    <i class="icon-angle-up"></i>
+  </a>
+
+
+
+
+  <div class="modal" id="modal">
+  <span id="cover" class="cover hide"></span>
+  <div id="modal-dialog" class="modal-dialog hide-dialog">
+    <div class="modal-header">
+      <span id="close" class="btn-close">关闭</span>
+    </div>
+    <hr>
+    <div class="modal-body">
+      <ul class="list-toolbox">
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/archives/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              博客
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/tag/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              标签
+            </a>
+          </li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+
+  
+      <div class="fexo-comments comments-post">
+    
+  <section class="disqus-comments">
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+  </section>
+
+  <script>
+    var disqus_shortname = 'wuweijia';
+    
+    var disqus_url = 'http://wuweijia.github.io/2017/12/19/react-navigtion-开发使用入门/';
+    
+    (function(){
+      var dsq = document.createElement('script');
+      dsq.type = 'text/javascript';
+      dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+
+  <script id="dsq-count-scr" src="//wuweijia.disqus.com/count.js" async></script>
+
+
+
+    
+
+    
+    
+
+    
+
+    
+    
+
+  </div>
+
+  
+
+  <script type="text/javascript">
+  function loadScript(url, callback) {
+    var script = document.createElement('script')
+    script.type = 'text/javascript';
+
+    if (script.readyState) { //IE
+      script.onreadystatechange = function() {
+        if (script.readyState == 'loaded' ||
+          script.readyState == 'complete') {
+          script.onreadystatechange = null;
+          callback();
+        }
+      };
+    } else { //Others
+      script.onload = function() {
+        callback();
+      };
+    }
+
+    script.src = url;
+    document.getElementsByTagName('head')[0].appendChild(script);
+  }
+
+  window.onload = function() {
+    loadScript('/js/bundle.js?235683', function() {
+      // load success
+    });
+  }
+</script>
+
+</body>
+</html>
