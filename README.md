@@ -30,4 +30,4 @@
 ## 学习笔记📒
 ### 图解http
   - 第一章
-    - [第一章 了解web及网络基础](https://github.com/wuweijia/wuweijia.github.io/issues/36)
+    - [了解web及网络基础](https://github.com/wuweijia/wuweijia.github.io/issues/36)
