@@ -1,6 +1,7 @@
 ### 阅读列表
+---
 
-1. [从零开始搭建Vue组件库](https://github.com/wuweijia/wuweijia.github.io/issues/48)
+1. [从零开始搭建Vue组件库](https://github.com/wuweijia/wuweijia.github.io/issues/48) （*阅读时间约为10分钟*）
 2. [前端渲染优化怎么入手](https://github.com/wuweijia/wuweijia.github.io/issues/44)
 3. [nuxt 集成 scss](https://github.com/wuweijia/wuweijia.github.io/issues/42)
 4. [webpack 打包 vue 0-1](https://github.com/wuweijia/wuweijia.github.io/issues/37)
