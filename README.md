@@ -3,9 +3,9 @@
 1. [小程序开发总结（后记）](https://github.com/wuweijia/wuweijia.github.io/issues/49) （*阅读时间约为3分钟*）
 2. [从零开始搭建Vue组件库](https://github.com/wuweijia/wuweijia.github.io/issues/48) （*阅读时间约为10分钟*）
 3. [前端渲染优化怎么入手](https://github.com/wuweijia/wuweijia.github.io/issues/44) （*阅读时间约为5分钟*）
-4. [nuxt 集成 scss](https://github.com/wuweijia/wuweijia.github.io/issues/42)
-5. [webpack 打包 vue 0-1](https://github.com/wuweijia/wuweijia.github.io/issues/37)
-6. [nuxt 中集成 matomo](https://github.com/wuweijia/nuxt-matomo)
+4. [nuxt 集成 scss](https://github.com/wuweijia/wuweijia.github.io/issues/42) （*阅读时间约为1分钟*）
+5. [webpack 打包 vue 0-1](https://github.com/wuweijia/wuweijia.github.io/issues/37) （*阅读时间约为3分钟*）
+6. [nuxt 中集成 matomo](https://github.com/wuweijia/nuxt-matomo) （*阅读时间约为5分钟*）
 7. [html5 视频播放标签 （video）的使用注意](https://github.com/wuweijia/wuweijia.github.io/issues/35)
 8. [微信签名错误，分享无logo、title](https://github.com/wuweijia/wuweijia.github.io/issues/34)
 9. [flex布局时，实现文本超出显示省略号](https://github.com/wuweijia/wuweijia.github.io/issues/30)
