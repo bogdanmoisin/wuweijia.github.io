@@ -1,5 +1,5 @@
 
-### 阅读列表
+### 建议阅读列表
 ---
 1. [gitlab CI 集成 自动化发布 npm 私有库](https://github.com/wuweijia/wuweijia.github.io/issues/54)（*阅读时间约为3m*）
 2. [元素垂直居中的几种实现-常见面试题 ](https://github.com/wuweijia/wuweijia.github.io/issues/52) （*阅读时间约为1m 30s*）
