@@ -1,5 +1,5 @@
 
-#技术笔记/阅读列表精选
+# 技术笔记/阅读列表精选
 ---
 1. [清楚浮动的几种方案（不在死记硬背） · Issue #57 · wuweijia/wuweijia.github.io · GitHub](https://github.com/wuweijia/wuweijia.github.io/issues/57)
 2. [gitlab CI 集成 自动化发布 npm 私有库](https://github.com/wuweijia/wuweijia.github.io/issues/54)（*阅读时间约为3m*）
